@@ -2,6 +2,7 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class Channel {
     private String name;
@@ -52,5 +53,10 @@ public class Channel {
         } else {
             System.err.println("show can't be null");
         }
+    }
+    public TVShow getRandomShow() {
+        Random random = new Random();
+        int rd = random.nextInt(shows.size());
+        return shows.get(rd);
     }
 }

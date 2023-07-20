@@ -22,16 +22,6 @@ public class RemoteController {
         this.tv = tv;
     }
 
-    public void onChannel(int num) {
-        if (num > tv.getChannels().size()|| num<=0) {
-            System.err.println("not found");
-        } else
-            for (Channel channel : tv.getChannels()) {
-                if (channel.getNumber() == num) {
-                    System.out.println(getRandomShow(channel.getShows()));
-                }
-            }
-    }
 
     private TVShow getRandomShow(List<TVShow> shows) {
         Random random = new Random();
