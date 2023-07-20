@@ -22,6 +22,6 @@ public class Main {
 
         remoteController = new RemoteController(tv);
 
-        System.out.println(remoteController.onChannel(2));
+        remoteController.onChannel(2);
     }
 }

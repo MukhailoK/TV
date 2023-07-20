@@ -22,18 +22,21 @@ public class RemoteController {
         this.tv = tv;
     }
 
-    public TVShow onChannel(int num) {
-        for (Channel channel : tv.getChannels()) {
-            if (channel.getNumber() == num) {
-                return getRandomShow(channel.getShows());
+    public void onChannel(int num) {
+        if (num > tv.getChannels().size()) {
+            System.err.println("not found");
+        } else
+            for (Channel channel : tv.getChannels()) {
+                if (channel.getNumber() == num) {
+                    System.out.println(getRandomShow(channel.getShows()));
+                }
             }
-        }
-        return null;
+
     }
 
     private TVShow getRandomShow(List<TVShow> shows) {
         Random random = new Random();
-        int rd = random.nextInt(shows.size() + 1);
+        int rd = random.nextInt(shows.size());
         return shows.get(rd);
     }
 
