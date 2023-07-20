@@ -23,7 +23,12 @@ public class Main {
         remoteController = new RemoteController(tv);
         remoteController.onTV();
         remoteController.onChannel(2);
+        remoteController.volumeUp();
+        remoteController.standby();
+        remoteController.onTV();
+        remoteController.volumeDown();
         remoteController.offTV();
         remoteController.onTV();
+        remoteController.standby();
     }
 }

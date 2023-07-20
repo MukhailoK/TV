@@ -21,11 +21,20 @@ public class RemoteController {
         tv.onChannel(num);
     }
     public void onTV() {
-        onChannel(tv.getLastChannel());
+        tv.onTV();
+    }
+    public void offTV(){
+        tv.offTV();
     }
 
-    public void offTV() {
-        System.out.println("Standby");
+    public void standby() {
+       tv.standby();
+    }
+    public void volumeUp(){
+        tv.volumeUp();
+    }
+    public void volumeDown(){
+        tv.volumeDown();
     }
 
 }
