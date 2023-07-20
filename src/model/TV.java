@@ -27,6 +27,10 @@ public class TV {
         }
     }
 
+    public int getLastChannel() {
+        return lastChannel;
+    }
+
     public void onChannel(int num) {
         if (num > channels.size() || num <= 0) {
             System.err.println("not found");
@@ -39,11 +43,4 @@ public class TV {
             }
     }
 
-    public void onTV() {
-        onChannel(lastChannel);
-    }
-
-    public void offTV() {
-        System.out.println("Standby");
-    }
 }
