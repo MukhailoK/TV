@@ -21,7 +21,9 @@ public class Main {
         tv.addChannel(channel1);
 
         remoteController = new RemoteController(tv);
-
-        remoteController.getTv().onChannel(1);
+        remoteController.getTv().onTV();
+        remoteController.getTv().onChannel(2);
+        remoteController.getTv().offTV();
+        remoteController.getTv().onTV();
     }
 }

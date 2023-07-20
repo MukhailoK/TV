@@ -5,6 +5,7 @@ import java.util.List;
 
 public class TV {
     private List<Channel> channels;
+    private int lastChannel = 1;
 
     public TV() {
         this.channels = new ArrayList<>();
@@ -33,7 +34,16 @@ public class TV {
             for (Channel channel : channels) {
                 if (channel.getNumber() == num) {
                     System.out.println(channel.getRandomShow());
+                    lastChannel = num;
                 }
             }
+    }
+
+    public void onTV() {
+        onChannel(lastChannel);
+    }
+
+    public void offTV() {
+        System.out.println("Standby");
     }
 }
