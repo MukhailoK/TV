@@ -7,12 +7,12 @@ public class Main {
     public static void main(String[] args) {
         RemoteController remoteController;
 
-        Channel channel = new Channel("channel1", 1);
-        Channel channel1 = new Channel("channel2", 2);
+        Channel channel = new Channel("Discovery", 1);
+        Channel channel1 = new Channel("Comedy", 2);
 
         for (int i = 0; i < 10; i++) {
-            channel.addShow(new TVShow("show" + (i + 1)));
-            channel1.addShow(new TVShow("stand up" + (i + 1)));
+            channel.addShow(new TVShow("show " + (i + 1)));
+            channel1.addShow(new TVShow("stand up " + (i + 1)));
         }
 
         TV tv = new TV();
