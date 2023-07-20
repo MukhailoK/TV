@@ -23,7 +23,7 @@ public class RemoteController {
     }
 
     public void onChannel(int num) {
-        if (num > tv.getChannels().size()) {
+        if (num > tv.getChannels().size()|| num<=0) {
             System.err.println("not found");
         } else
             for (Channel channel : tv.getChannels()) {
