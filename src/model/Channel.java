@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Channel {
-   private String name;
-   private int number;
-   private List<TVShow> shows;
+    private String name;
+    private int number;
+    private List<TVShow> shows;
 
     public Channel(String name, int number) {
         this.name = name;
@@ -20,6 +20,14 @@ public class Channel {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Channel{" +
+                "name='" + name + '\'' +
+                ", number=" + number +
+                '}';
     }
 
     public int getNumber() {
@@ -37,7 +45,12 @@ public class Channel {
     public void setShows(List<TVShow> shows) {
         this.shows = shows;
     }
-    public void addShow(TVShow show){
-        shows.add(show);
+
+    public void addShow(TVShow show) {
+        if (show != null) {
+            shows.add(show);
+        } else {
+            System.err.println("show can't be null");
+        }
     }
 }

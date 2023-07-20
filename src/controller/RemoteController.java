@@ -31,7 +31,6 @@ public class RemoteController {
                     System.out.println(getRandomShow(channel.getShows()));
                 }
             }
-
     }
 
     private TVShow getRandomShow(List<TVShow> shows) {

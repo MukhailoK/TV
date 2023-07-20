@@ -19,6 +19,10 @@ public class TV {
     }
 
     public void addChannel(Channel channel) {
-        channels.add(channel);
+        if (channel != null) {
+            channels.add(channel);
+        } else {
+            System.err.println("channel can't be null");
+        }
     }
 }
