@@ -37,7 +37,9 @@ public class TV {
         } else
             for (Channel channel : channels) {
                 if (channel.getNumber() == num) {
-                    System.out.println(channel.getRandomShow());
+                    System.out.println(channel.getNumber() + " "
+                            + channel.getName() + " "
+                            + channel.getRandomShow().getTitle());
                     lastChannel = num;
                 }
             }
